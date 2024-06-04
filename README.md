@@ -22,6 +22,7 @@ The Book Management System is a Laravel-based application designed to manage aut
 - Composer
 - NPM
 - Faker Library
+- Jwt Authentications
 
 ## Installation
 
@@ -103,6 +104,31 @@ Access the application at http://127.0.0.1:8000/api.
 ### Managing Publishers
 1. Navigate to the Publishers section from the dashboard.
 2. Add, edit, view, or delete publishers as needed.
+
+## JWT Authentication
+The Book Management System API utilizes JSON Web Token (JWT) for authentication. To access API endpoints, you'll need to obtain a JWT token by logging in with a registered user.
+
+### Process: 
+- Send a POST request to the /auth/login endpoint with your username and password in the request body.
+- Upon successful login, the API will respond with a JSON object containing the JWT token and its expiration time.
+- Include the JWT token in the Authorization header of subsequent API requests. Here's an example header format:
+
+```bash
+Authorization: Bearer {your_jwt_token_here}
+```
+### Example (using Postman):
+1. In Postman, set the HTTP method for a request to POST and the URL to http://127.0.0.1:8000/api/auth/login.
+2. In the Body tab, select raw and enter your email and password as json.
+```bash
+{
+    "email": "admin@mail.com",
+    "password" : "123456"
+}
+```
+4. Send the request.
+5. If the login is successful, the response body will contain the JWT token.
+6. Copy the JWT token and paste it into the Authorization header for subsequent API requests. Set the type to "Bearer" followed by a space and then the token.
+7. By incorporating this information, you'll provide users with a clear understanding of how to interact with the Book Management System API using JWT authentication.
 
 ## API Endpoints
 ### Authentication Routes
