@@ -6,6 +6,14 @@
 
 The Book Management System is a Laravel-based application designed to manage authors, books, publishers, and users. This system provides functionality to create, read, update, and delete records for each entity, along with user authentication and management features.
 
+## Database Documentation Link
+1. - [Click here to view documentation](https://docs.google.com/document/d/13TjzZKP1iiidtg1-zmdRimcKUp3kyH-PpHGrx2f3KRY/edit?usp=sharing)
+
+2. or Copy the Link
+    ```bash
+    https://docs.google.com/document/d/13TjzZKP1iiidtg1-zmdRimcKUp3kyH-PpHGrx2f3KRY/edit?usp=sharing
+    ```
+
 ## Features
 
 - Manage Authors: Add, view, edit, and delete author information.
